@@ -1,10 +1,12 @@
-#include <stdio.h>
 #include <stdarg.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include "main.h"
 
 int _printf(const char *format, ...)
 {
 	int i;
-	int strlen;
+	int strlen = 0;
 	va_list args;
 	va_start(args, format);
 
@@ -12,7 +14,7 @@ int _printf(const char *format, ...)
 	{
 		for (i = 0; format[i] != '\0'; i++)
 		{
-			putchar(format[i]);
+			_putchar(format[i]);
 			strlen++;
 		}
 	}
