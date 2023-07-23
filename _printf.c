@@ -7,7 +7,7 @@ int _printf(const char *format, ...)
 {
 	int i, j;
 	int strlen = 0;
-	char * s;
+	char *s;
 	va_list args;
 	va_start(args, format);
 
@@ -50,9 +50,9 @@ int _printf(const char *format, ...)
 					}
 					continue;
 				}
-				_putchar(format[i]);
-				strlen++;
 			}
+			_putchar(format[i]);
+			 strlen++;
 		}
 	}
 	va_end(args);
