@@ -34,21 +34,19 @@ int _printf(const char *format, ...)
 					switch (format[i])
 					{
 						case 's':
-							strlen += _strlen(va_arg(args, char *));
 							s = va_arg(args, char *);
+							strlen += _strlen(s);
 							for (j = 0; s[j] != '\0'; j++)
 							{
 								_putchar(s[j]);
 							}
-							break;
 						case 'c':
 							strlen++;
 							_putchar(va_arg(args, int));
-							break;
 						default:
+							_putchar(format[i]);
 							strlen++;
 					}
-					continue;
 				}
 			}
 			_putchar(format[i]);
