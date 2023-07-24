@@ -26,17 +26,14 @@ int _printf(const char *format, ...)
 				}
 				else if (format[i] == '\0')
 				{
-					_putchar('%');
 					strlen++;
-					continue;
+					return (-1);
 				}
 				else if (format[i] == ' ')
 				{
-					_putchar('%');
-					_putchar(' ');
 					strlen++;
 					i++;
-					continue;
+					return (-1);
 				}
 				else
 				{
