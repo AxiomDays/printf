@@ -23,6 +23,7 @@ int _printf(const char *format, ...)
 				{
 					_putchar('%');
 					strlen++;
+					continue;
 				}
 				else if (format[i] == ' ')
 				{
@@ -30,6 +31,7 @@ int _printf(const char *format, ...)
 					_putchar(' ');
 					strlen++;
 					i++;
+					continue;
 				}
 				else
 				{
@@ -50,7 +52,8 @@ int _printf(const char *format, ...)
 							_putchar(va_arg(args, int));
 							break;
 						default:
-							_putchar(format[i]);
+							_putchar('%');
+							strlen++;
 							strlen++;
 					}
 				}
