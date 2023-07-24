@@ -42,6 +42,17 @@ int _printf(const char *format, ...)
 						case 's':
 							i++;
 							s = va_arg(args, char *);
+							if (s == NULL)
+							{
+								_putchar('(');
+								_putchar('n');
+								_putchar('u');
+								_putchar('l');
+								_putchar('l');
+								_putchar(')');
+								strlen += 6;
+								break;
+							}
 							strlen += _strlen(s);
 							for (j = 0; s[j] != '\0'; j++)
 							{
