@@ -5,7 +5,8 @@
 
 int _printf(const char *format, ...)
 {
-	int i, j;
+	int i = 0;
+	int j;
 	int strlen = 0;
 	char *s;
 	va_list args;
@@ -26,6 +27,7 @@ int _printf(const char *format, ...)
 				else if (format[i] == ' ')
 				{
 					_putchar('%');
+					_putchar(' ');
 					strlen++;
 					i++;
 				}
@@ -34,15 +36,19 @@ int _printf(const char *format, ...)
 					switch (format[i])
 					{
 						case 's':
+							i++;
 							s = va_arg(args, char *);
 							strlen += _strlen(s);
 							for (j = 0; s[j] != '\0'; j++)
 							{
 								_putchar(s[j]);
 							}
+							break;
 						case 'c':
+							i++;
 							strlen++;
 							_putchar(va_arg(args, int));
+							break;
 						default:
 							_putchar(format[i]);
 							strlen++;
