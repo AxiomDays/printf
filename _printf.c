@@ -19,7 +19,12 @@ int _printf(const char *format, ...)
 			while (format[i] == '%')
 			{
 				i++;
-				if (format[i] == '\0')
+				if (format[i] == '%')
+				{
+					strlen++;
+					break;
+				}
+				else if (format[i] == '\0')
 				{
 					_putchar('%');
 					strlen++;
