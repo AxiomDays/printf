@@ -68,14 +68,12 @@ int _printf(const char *format, ...)
 						case 'd':
 							i++;
 							di = va_arg(args, int);
-							print_integer(di);
-							strlen++;
+							strlen += print_integer(di);
 							break;
 						case 'i':
 							i++;
 							di = va_arg(args, int);
-							print_integer(di);
-							strlen++;
+							strlen += print_integer(di);
 							break;
 						default:
 							_putchar('%');
