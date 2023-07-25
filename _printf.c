@@ -14,7 +14,7 @@ int _printf(const char *format, ...)
 {
 	int i = 0;
 	int j;
-	int di;
+	int di, id;
 	int strlen = 0;
 	char *s;
 	va_list args;
@@ -79,7 +79,7 @@ int _printf(const char *format, ...)
 							break;
 						case 'i':
 							i++;
-							di = va_arg(args, int);
+							id = va_arg(args, int);
 							strlen += print_integer(di);
 							break;
 						default:
