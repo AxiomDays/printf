@@ -7,6 +7,7 @@ int _printf(const char *format, ...)
 {
         int i = 0;
         int j;
+	int di;
         int strlen = 0;
         char *s;
         va_list args;
@@ -33,7 +34,6 @@ while (format != NULL && format[i] != '\0')
                                 {
                                         strlen++;
                                         i++;
-                                        return (-1);
                                 }
 				else
                                 {
@@ -64,6 +64,18 @@ while (format != NULL && format[i] != '\0')
                                                         i++;
                                                         strlen++;
                                                         _putchar(va_arg(args, int));
+                                                        break;
+						case 'd':
+							i++;
+							di = va_arg(args, int);
+							print_integer(di);
+							strlen++;
+							break;
+						case 'i':
+							i++;
+                                                        di = va_arg(args, int);
+                                                        print_integer(di);
+                                                        strlen++;
                                                         break;
                                                 default:
                                                         _putchar('%');
