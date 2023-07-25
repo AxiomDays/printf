@@ -22,7 +22,6 @@ int _printf(const char *format, ...)
 				i++;
 				if (format[i] == '%')
 				{
-					strlen++;
 					break;
 				}
 				else if (format[i] == '\0')
