@@ -2,29 +2,25 @@
 #include <stdlib.h>
 #include "main.h"
 
-void print_integer(int num) {
-	int reverse;
-	int temp;
+int print_integer(int num) {
+	int len = 0;
+	int check = 1;
 	
     	if (num < 0) {
-        	_putchar('-');
+        	len += _putchar('-');
         	num = -num;
     	}
 
-    	reverse = 0;
-    	temp = num;
-    	while (temp > 0) {
-        	reverse = reverse * 10 + temp % 10;
-        	temp /= 10;
-    	}
+	for (;num/check > 9;)
+		check *= 10;
 
-    	if (num == 0)
-        	_putchar('0');
-    	else {
-        	while (reverse > 0) {
-            	_putchar('0' + reverse % 10);
-            	reverse /= 10;
-        	}
-    	}
+	for (;check != 0;)
+	{
+		len += _putchar('0' + num/check);
+		num %= check;
+		check/=10;
+	}
+
+	return (len);
 }
 
