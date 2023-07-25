@@ -7,7 +7,7 @@ void print_integer(int num) {
 	int temp;
 	
     	if (num < 0) {
-        	putchar('-');
+        	_putchar('-');
         	num = -num;
     	}
 
