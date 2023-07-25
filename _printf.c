@@ -2,6 +2,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
+/**
+ * _printf - Entry point
+ *
+ * Description: 'a program to emulate the functions of printf'
+ * @format: char pointer to a format string that holds the text
+ * Return: strlen
+ */
 
 int _printf(const char *format, ...)
 {
