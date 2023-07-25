@@ -80,7 +80,7 @@ int _printf(const char *format, ...)
 						case 'i':
 							i++;
 							id = va_arg(args, int);
-							strlen += print_integer(di);
+							strlen += print_integer(id);
 							break;
 						default:
 							_putchar('%');
