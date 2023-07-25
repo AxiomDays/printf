@@ -31,6 +31,7 @@ int _printf(const char *format, ...)
 				}
 				else if (format[i] == ' ')
 				{
+					return (-1);
 					strlen++;
 					i++;
 				}
@@ -76,7 +77,6 @@ int _printf(const char *format, ...)
 							break;
 						default:
 							_putchar('%');
-							strlen++;
 							strlen++;
 					}
 				}
