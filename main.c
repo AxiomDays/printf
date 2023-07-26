@@ -5,15 +5,9 @@ int main(void)
 {
     int len;
     int len2;
-    int test = 7;
-    int testl;
-    int testl2;
     unsigned int ui;
 
-    len = _printf("Let's try to printf a simple sentence.\n");
-    len2 = _printf("Let's keep %s thinking! Say this %d times!\n", "positive", test);
     ui = (unsigned int)INT_MAX + 1024;
-    _printf("Length:[%d, %i, %d]\n", len, len, len2);
     _printf("Negative:[%d]\n", -762534);
     _printf("Unsigned:[%u]\n", ui);
     _printf("Unsigned octal:[%o]\n", ui);
@@ -39,8 +33,8 @@ int main(void)
          _printf("Maximum value of int: %i\n", INT_MAX);
          _printf("Minimum value of int: %i\n", INT_MIN);
          _printf("%c%d%s%i\n", 'h', 2, "kira", 4);
-	 testl = _printf("%c", 'S');
-	 testl2 = printf("%c", 'S');
-	 _printf("These are the compared sizes, _printf:%d and printf:%d\n", testl, testl2);
+	 len = _printf("%s", "This sentence is retrieved from va_args!\n");
+	 len2 = printf("%s", "This sentence is retrieved from va_args!\n");
+	 printf("These are the compared sizes, _printf:%d and printf:%d\n", len, len2);
     return (0);
 }
