@@ -29,7 +29,7 @@ int _printf(const char *format, ...)
 				i++;
 				if (format[i] == '%')
 				{
-					break;
+					continue;
 				}
 				else if (format[i] == '\0')
 				{
@@ -87,8 +87,11 @@ int _printf(const char *format, ...)
 					}
 				}
 			}
+			else
+			{
 			_putchar(format[i]);
 			strlen++;
+			}
 		}
 	}
 	va_end(args);
