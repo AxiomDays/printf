@@ -87,11 +87,8 @@ int _printf(const char *format, ...)
 					}
 				}
 			}
-			else
-			{
 			_putchar(format[i]);
 			strlen++;
-			}
 		}
 	}
 	va_end(args);
