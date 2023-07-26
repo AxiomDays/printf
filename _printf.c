@@ -61,7 +61,6 @@ int _printf(const char *format, ...)
 								break;
 							}
 							strlen += _strlen(s);
-							strlen -= 1;
 
 							for (j = 0; s[j] != '\0'; j++)
 							{

@@ -25,6 +25,6 @@ int print_integer(int num) {
 		buff/=10;
 	}
 
-	return (len);
+	return (len - 1);
 }
 
