@@ -69,7 +69,6 @@ int _printf(const char *format, ...)
 							break;
 						case 'c':
 							i++;
-							strlen++;
 							_putchar(va_arg(args, int));
 							break;
 						case 'd':
