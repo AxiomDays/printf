@@ -14,27 +14,33 @@ int _strlen(char *s)
 
         for (i = 0; *s != '\0'; i++)
         {
-		if (*s == '\\')
-		{
+	if (*s == '\\')
+	{
 		if (*(s + 1) != '\0')
 		{
-                if (*(s + 1) == 'n' || *(s + 1) == 't' || *(s + 1) == 'r' || *(s + 1) == '\\') 
-		{
-                    s += 2; 
-                    len++;
-                }
-                else {
-                    s++;
-		}
+			if (*(s + 1) == 'n' || *(s + 1) == 't' || *(s + 1) == 'r' || *(s + 1) == '\\') 
+			{
+				s += 2; 
+				len++;
+				break;
+			}
+			else 
+			{
+				s++;
+				break;
+			}
 		}
 		else
 		{
 			len++;
 			break;
 		}
-		}
-                s++;
-                len++;
-        }
-        return (len);
+	}
+	else
+	{
+		s++;
+		len++;
+	}
+	}
+	return (len);
 }
