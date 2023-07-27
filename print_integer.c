@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "main.h"
 
-int print_integer(int num) {
+int print_integer(long int num) {
 	int len = 0;
 	int buff = 1;
 	

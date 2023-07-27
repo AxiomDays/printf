@@ -15,6 +15,7 @@ int _printf(const char *format, ...)
 	int i = 0;
 	int j;
 	int di, id;
+	char *rev;
 	int strlen = 0;
 	char *s;
 	va_list args;
@@ -89,6 +90,11 @@ int _printf(const char *format, ...)
 							i++;
 							id = va_arg(args, int);
 							strlen += print_integer(id);
+							break;
+						case 'r':
+							i++;
+							rev = va_arg(args, char *);
+							strlen += print_rev(rev);
 							break;
 						default:
 							_putchar('%');
