@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <limits.h>
 #include "main.h"
 
 /**
@@ -10,15 +9,16 @@
  */
 int main(void)
 {
-	//int len, len2;
-	_printf("Let's Reverse%r", "Lets revice");
-	//fflush(stdout);
-	//if (len != len2)
-	//{
-	//	printf("%d and yours: %d", len2, len);
-	//	printf("Lengths differ.\n");
-	//	fflush(stdout);
-	//	return (1);
-	//}
-	//return (0);
+	int len, len2;
+
+	len = _printf("Complete the sentence: You %r nothing, Jon Snow.\n", "");
+	len2 = printf("Complete the sentence: You  nothing, Jon Snow.\n");
+	fflush(stdout);
+	if (len != len2)
+	{
+		printf("Lengths differ.\n");
+		fflush(stdout);
+		return (1);
+	}
+	return (0);
 }
