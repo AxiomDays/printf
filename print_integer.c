@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include "main.h"
 
-int print_integer(long int num) {
+int print_integer(long num) {
 	int len = 0;
-	int buff = 1;
+	long buff = 1;
 	
     	if (num < 0) {
         	len += _putchar('-');

@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- * _printf - Entry point
+ * _printf - Emulates printf
  *
  * Description: 'a program to emulate the functions of printf'
  * @format: char pointer to a format string that holds the text
